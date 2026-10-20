@@ -6,9 +6,9 @@ class FinancialNetwork:
     rng = np.random.default_rng(55)
     
     def __init__(self, N):
-        self.N = N # 国の数
+        self.N = N 
         raw_p = FinancialNetwork.rng.uniform(0, 1, N)
-        self.p = raw_p / raw_p[np.argmin(raw_p)] # 最小値によって正規化
+        self.p = raw_p / raw_p[np.argmin(raw_p)] 
         self.C, self.A = self.calc_A(self.N)
         self.D = np.eye(self.N)
         v0 = self.calc_v0()
