@@ -42,7 +42,7 @@ class FinancialNetwork:
                 'default', 'p_d', 'x_max', 'x_min']
         return {k: getattr(self, k) for k in keys}
 
-N_list = np.arange(2, 22, 2)
+N_list = np.arange(2, 25, 2)
 n_instances = 50
 
 for N in N_list:
